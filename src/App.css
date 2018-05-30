@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.fas {
+  display: none;
+}
+.openham{
+  z-index: 100;
+  top:0;
+  
+  bottom:0;
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(212,178,211,1) 29%, rgba(193,181,218,1) 50%, rgba(188,182,220,1) 56%, rgba(148,187,233,1) 100%);
+position: fixed;
+width: 100%;
+  display: block;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.closedham{
+  
+  position: absolute;
+  display: none;
+}
+nav.nav > ul > li > a{
+  padding:10px;
+}
+nav.nav > ul > li > a:hover{
+  padding:10px;
+  background:white;
+}
+
+.nav {
+  background: linear-gradient(90deg, rgba(173,172,185,1) 0%, rgba(179,179,222,1) 0%, rgba(171,254,195,0.10820819805194803) 98%);display: grid;
+  justify-content: space-around;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  
+}
+
+ a{
+  text-decoration: none;
+ 
+}
+nav > ul{
+  display: flex;
+  
+}
+
+nav > ul > li {
+  list-style: none;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.bild{
+  transition: transform 150ms;
+  animation: mymove 2s;
+}
+
+@keyframes mymove {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.bild:hover{
+  
+  transform: scale(1.05);
+  border: solid 5px green;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+}
+
+@media all and (max-width: 768px) {
+  .nav {
+    background: linear-gradient(90deg, rgba(173,172,185,1) 0%, rgba(179,179,222,1) 0%, rgba(171,254,195,0.10820819805194803) 98%);display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  }
+  .nav > ul{
+    display: none;
+  }
+
+  .fas {
+    cursor: pointer;
+    color: grey;
+    margin: 10px;
+    grid-column: 1;
+    align-self: center;
+    display: block;
+  }
+
+  .loggo {
+    grid-column: 5;
+    align-self: center;
+  }
+  h1 >a   {
+    color:rgb(240, 74, 74);
+text-decoration: none;
+  }
+}
+
+.wrapper{
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+
+.bild{
+  border-radius: 10px;
+text-align: center;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+.bildimg{
+  
+  opacity: 0.7;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  width:100%;
+  
+}
+
+p{
+  padding:5px;
+ 
+}
